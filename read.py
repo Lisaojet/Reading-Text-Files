@@ -1,9 +1,10 @@
 
+import string
 
 def read_file_content(filename):
-    with open(filename) as file:
-        file_content = file.read()
-    return file_content
+    open_file = open("./story.txt", "r")
+        read_file = open_file.read()
+    return read_file
 
 def count_words():
     text = read_file_content("./story.txt")
@@ -11,10 +12,7 @@ def count_words():
     words = text.split()
     count = {}
     for word in words:
-        if word in count
-            count[word] += 1
-        else:
-            count[word] = 1
+        count[word] = words.count(word)
     return count
 
 print(count_words())
