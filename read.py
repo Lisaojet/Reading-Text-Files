@@ -7,6 +7,7 @@ def read_file_content(filename):
 
 def count_words():
     text = read_file_content("./story.txt")
+    text = text.translate(str.maketrans("", "", string punctuation))
     words = text.split()
     count = {}
     for word in words:
